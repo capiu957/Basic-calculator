@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st # type: ignore
 
 def calculate(num1, num2, operation):
     
@@ -20,7 +20,7 @@ def calculate(num1, num2, operation):
         return 'Error: invalid input!Please insert numbers'
 
 st.title('Basic Calculator')
-#st.write('Choose two numbers and the operation you want to do')
+st.write('Choose two numbers and the operation you want to do')
 
 num1 = st.text_input('Type in the first number')
 num2 = st.text_input('Type in the second number')
