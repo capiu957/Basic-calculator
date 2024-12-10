@@ -11,7 +11,7 @@ def calculate(num1, num2, operation):
         elif operation == 'Sub':
             return num1 - num2
         elif operation == 'Mult': 
-            return num1 * num2:
+            return num1 * num2
         elif operation == 'Div':
              if num2 == 0:
                 return = 'Error: division by zero!'
