@@ -1,4 +1,4 @@
-import streamlit as st # type: ignore
+import streamlit as st
 
 def calculate(num1, num2, operation):
     try:
@@ -19,7 +19,7 @@ def calculate(num1, num2, operation):
 
 # Streamlit app
 st.title('Basic Calculator')
-#st.write('Choose two numbers and the operation you want to do.')
+st.write('Choose two numbers and the operation you want to perform.')
 
 # User inputs
 num1 = st.text_input('Type in the first number')
@@ -29,4 +29,7 @@ operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div'])
 # Calculation and output
 if st.button('Calculate'):
     result = calculate(num1, num2, operation)
-st.write(f"Result: {result}")
+    if result is not None:
+        st.write(f"Result: {result}")
+    else:
+        st.write("No result was calculated.")
