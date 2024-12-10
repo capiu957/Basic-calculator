@@ -7,15 +7,15 @@ def calculate(num1, num2, operation):
         num2 = float(num2)
         
         if operation == 'Sum':
-            return = num1 + num2
+            return  num1 + num2
         elif operation == 'Sub':
-            return = num1 - num2
+            return  num1 - num2
         elif operation == 'Mult': 
-            return = num1 * num2:
+            return  num1 * num2
         elif operation == 'Div':
              if num2 == 0:
-                return = 'Error: division by zero!'
-             return = num1 / num2
+                return  'Error: division by zero!'
+             return  num1 / num2
     except ValueError:
         return 'Error: invalid input!Please insert numbers'
 
@@ -28,4 +28,4 @@ operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div'])
 
 if st.button('Calculate'):
    result = calculate(num1, num2, operation)
-   st.write = (f"Result: {result}")
+   #st.write (f"Result: {result}")
