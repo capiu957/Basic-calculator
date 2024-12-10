@@ -29,4 +29,4 @@ operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div'])
 # Calculation and output
 if st.button('Calculate'):
     result = calculate(num1, num2, operation)
-    st.write(f"Result: {result}")
+    #st.write(f"Result: {result}")
