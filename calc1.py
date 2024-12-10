@@ -1,31 +1,32 @@
-import streamlit as st # type: ignore
+import streamlit as st
 
 def calculate(num1, num2, operation):
-    
     try:
         num1 = float(num1)
         num2 = float(num2)
-        
         if operation == 'Sum':
-            return  num1 + num2
+            return num1 + num2
         elif operation == 'Sub':
-            return  num1 - num2
-        elif operation == 'Mult': 
-            return  num1 * num2
+            return num1 - num2
+        elif operation == 'Mult':
+            return num1 * num2
         elif operation == 'Div':
-             if num2 == 0:
-                return  'Error: division by zero!'
-             return  num1 / num2
+            if num2 == 0:
+                return 'Error: division by zero!'
+            return num1 / num2
     except ValueError:
-        return 'Error: invalid input!Please insert numbers'
+        return 'Error: invalid input! Please insert numbers.'
 
+# Streamlit app
 st.title('Basic Calculator')
-st.write('Choose two numbers and the operation you want to do')
+st.write('Choose two numbers and the operation you want to do.')
 
+# User inputs
 num1 = st.text_input('Type in the first number')
 num2 = st.text_input('Type in the second number')
 operation = st.selectbox('Choose the operation:', ['Sum', 'Sub', 'Mult', 'Div'])
 
+# Calculation and output
 if st.button('Calculate'):
-   result = calculate(num1, num2, operation)
-   #st.write (f"Result: {result}")
+    result = calculate(num1, num2, operation)
+    st.write(f"Result: {result}")
